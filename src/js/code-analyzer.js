@@ -100,7 +100,7 @@ function analyzeWhileStatement(whileStatement){
 }
 
 function analyzeForStatement(forStatement){
-    let conditionString = getExpressionString(forStatement.init) + ';' + getExpressionString(forStatement.test) + ';' + getExpressionString(forStatement.update);
+    let conditionString = getExpressionString(forStatement.init) + getExpressionString(forStatement.test) + ';' + getExpressionString(forStatement.update);
     let forStatementData = createExpressionTableRowData(
         forStatement.loc.start.line,
         'for statement',

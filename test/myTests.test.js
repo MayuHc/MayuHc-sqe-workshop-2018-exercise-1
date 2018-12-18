@@ -70,7 +70,7 @@ describe('Test ForStatement', () => {
     it('is analyzing a for statement correctly', () => {
         assert.deepEqual(
             analyzeParsedCode(parseCode('for(i=0;i<10;i++){x=x+1;}')),
-            [{line:1,type:'for statement',name:'',condition:'i=0;i<10;i++',value:''},{line:1,type:'assignment expression',name:'x',condition:'',value:'x+1'}]
+            [{line:1,type:'for statement',name:'',condition:'i=0i<10;i++',value:''},{line:1,type:'assignment expression',name:'x',condition:'',value:'x+1'}]
         );
     });
 });
